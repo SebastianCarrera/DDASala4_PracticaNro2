@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EjercicioPractica2.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Electrodomesticos</title>
+	</head>
+	<body>
+		<form id="Form1" runat="server" method="POST" oninput="resultado.value=(parseFloat(valor.value)-32)/1.8">
+		<div>
+			<h1>Electrodomesticos</h1>
+			Elegir producto: &nbsp;
+			<select id="Productos" runat="server"/>
+			<br/><br/>
+			<input type="submit" id="Convertir" runat="server" value="Aceptar" OnServerClick ="Convertir_ServerClick" />
+			<br/>
+			<div style="font-weight:bold" id="Resultado" runat="server"></div>
+			<br/><br/>
+			<input type="submit" id="MostrarGrafico" runat="server" value="Mostrar Imagen" OnServerClick ="MostrarGrafico_ServerClick" />
+			<br /><br />
+			<img id="Grafico" runat="server" />
+		</div>
+		</form>
+	</body>
+</html>
